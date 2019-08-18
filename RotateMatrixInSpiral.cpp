@@ -56,6 +56,31 @@ void RotateMatrixclockwise()
 		cout<<endl<<endl<<endl;
 	}
 }
+
+
+void RotateMatrix90degree()
+{
+	int row=0,coloumn=0;
+	int prev,curr;
+	while(row<M && coloumn<N)
+	{
+		prev=A[N-1][coloumn];
+		for(int i=coloumn;i<M;i++)
+		{
+			curr=A[row][i];
+			A[row][i]=prev;
+			prev=curr;
+		}
+		for(int i=row;i<N;i++)
+		{
+			curr=A[i][M-1];
+			A[i][M-1]=prev;
+			
+		}
+	}
+} 
+
+
 int main()
 {
 	M=4,N=4;
